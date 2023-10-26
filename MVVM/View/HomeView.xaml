@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <TextBlock Text="Discover"
+        <TextBlock Text="Hjem"
                    Foreground="white"
                    FontSize="28"
                    HorizontalAlignment="Left"
@@ -32,11 +32,11 @@
 
                 <Grid>
                     <StackPanel>
-                        <TextBlock Text="New Movies"
+                        <TextBlock x:Name="tbBorder1Title" Text="Tilføj"
                                    Foreground="White"
                                    FontSize="28"
                                    Margin="20,10,10,0"/>
-                        <TextBlock Text="Find all the best new movies here"
+                        <TextBlock x:Name="tbBorder1Header" Text="Tilføj nye hunde fra fil eller manuelt"
                                    Foreground="White"
                                    FontSize="18"
                                    Margin="20,10,10,0"/>
@@ -60,7 +60,7 @@
             </Border>
         </StackPanel>
         <StackPanel>
-            <TextBlock Text="Trending right now" Foreground="White" Margin="0,10" FontSize="18"/>
+            <TextBlock Text="Senest Tilføjet" Foreground="White" Margin="0,10" FontSize="18"/>
 
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>

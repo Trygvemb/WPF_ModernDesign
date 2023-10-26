@@ -16,9 +16,10 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    
+
     <Border Background="#272537"
             CornerRadius="20">
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -29,16 +30,42 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
-            <TextBlock Text="TheMovies"
-           VerticalAlignment="Center"
-           HorizontalAlignment="left"
-           Foreground="White"
-           FontSize="22"
-           Margin="20,0,0,0"/>
+
+            <StackPanel Orientation="Horizontal"    Grid.Column="1" HorizontalAlignment="Right">
+                <!-- custom minimize button -->
+                <RadioButton Name="MinimizeButton" 
+                             Content="-" 
+                             FontWeight="Bold"
+                             FontSize="20"
+                             VerticalContentAlignment="Top"
+                             Width="30" Height="30" 
+                             HorizontalAlignment="Right" 
+                             VerticalAlignment="Top" 
+                             Margin="10,10,0,0" 
+                             Click="MinimizeButton_Click"
+                             Style="{StaticResource WindowButtonTheme}"/>
+
+                <!-- custom close button -->
+                <RadioButton Name="CloseButton" 
+                             Content="x" 
+                             FontSize="20"
+                             Width="30" Height="30"  
+                             HorizontalAlignment="Right" 
+                             VerticalAlignment="Top" 
+                             Margin="10,10,10,0" 
+                             Click="CloseButton_Click"
+                             Style="{StaticResource WindowButtonTheme}"/>
+                </StackPanel>
+
+            <TextBlock Text="Carolinekilde's"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
 
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Home"
+                <RadioButton Content="Hjem"
                              Height="50"
                              Foreground="White"
                              FontSize="15"
@@ -46,19 +73,19 @@
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
 
-                <RadioButton Content="Movies"
+                <RadioButton Content="Oversigt"
                              Height="50"
                              Foreground="White"
                              FontSize="15"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding MoviesViewCommand}"/>
 
-                <RadioButton Content="Program"
+                <RadioButton Content="Partner Match"
                              Height="50"
                              Foreground="White"
                              FontSize="15"
                              Style="{StaticResource MenuButtonTheme}"/>
-                
+
             </StackPanel>
 
             <TextBox Width="250"
@@ -73,7 +100,6 @@
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
-
         </Grid>
     </Border>
 </Window>
