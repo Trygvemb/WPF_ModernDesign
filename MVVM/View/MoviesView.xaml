@@ -8,6 +8,72 @@
              d:DesignHeight="450" d:DesignWidth="800"
              Background="#1b1b1b">
     <StackPanel>
-        
+        <TextBlock Text="Oversigt"
+           Foreground="white"
+           FontSize="28"
+           HorizontalAlignment="Left"
+           Margin="0,0,0,20"/>
+
+        <Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <ScrollViewer.Resources>
+                    <Style TargetType="ScrollViewer">
+                        
+                        
+                        <Style.Triggers>
+                            
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="HorizontalScrollBarVisibility" Value="Visible" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter Property="HorizontalScrollBarVisibility" Value="Hidden" />
+                            </Trigger>
+                            
+                        </Style.Triggers>
+                    </Style>
+                </ScrollViewer.Resources>
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Margin" Value="15,0,0,0"/>
+                        </Style>
+                        
+                        </StackPanel.Resources>
+                    
+                    <Border Width="150"
+                            Height="150"
+                            Background="#26B2EB"
+                            CornerRadius="10"
+                            Margin="0"/>
+
+                    <Border Width="150"
+                            Height="150"
+                            Background="#267BEB"
+                            CornerRadius="10"/>
+
+                    <Border Width="150"
+                            Height="150"
+                            Background="#263DEB"
+                            CornerRadius="10"/>
+
+                    <Border Width="150"
+                            Height="150"
+                            Background="#5426EB"
+                            CornerRadius="10"/>
+
+                    <Border Width="150"
+                            Height="150"
+                            Background="#5426EB"
+                            CornerRadius="10"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        </Grid>
+
+
+
     </StackPanel>
 </UserControl>
